@@ -1,0 +1,16 @@
+[package]
+name = "tttt"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["dev"]
+dev = ["did-core/dev"]
+local = ["did-core/local"]
+testnet = ["did-core/testnet"]
+mainnet = ["did-core/mainnet"]
+
+[dependencies]
+ckb-std = "0.12.1"
+did-core = { path = "../../libs/did-core", default-features = false }
+did-types = { path = "../../../did-types" }
